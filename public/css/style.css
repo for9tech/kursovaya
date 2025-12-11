@@ -1,0 +1,954 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Evolventa;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: rgba(25, 62, 60, 1);
+    color: white;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.header .logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header .logo img {
+    height: 90px;
+    border-radius: 20px;
+}
+
+.header .nav {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 26px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.header .nav a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header .enter {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.user-greeting {
+    color: white;
+    font-weight: 600;
+    font-size: 26px;
+    white-space: nowrap;
+}
+
+/* Стили для иконки входа */
+.enter {
+    display: flex;
+    align-items: center;
+}
+
+.enter img {
+    width: 36px;
+    height: 36px;
+}
+
+/* Стили для иконки выхода */
+.logout-icon {
+    display: flex;
+    align-items: center;
+}
+
+.logout-image {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1); /* Просто белая иконка */
+}
+
+
+.hero-section {
+    position: relative;
+    background-image: url('/images/пупупу.jpg'); /* Placeholder for background image */
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 100px 20px;
+
+    border-radius: 0px 0px 40px 40px
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text readability */
+    z-index: 1;
+    border-radius: 0px 0px 40px 40px
+}
+.hero-section .content {
+    position: relative;
+    z-index: 2;
+}
+.hero-section h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+.hero-section p {
+    font-size: 24px;
+}
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: white;
+
+}
+.feature-item {
+    text-align: center;
+}
+
+.feature-item .icon img {
+    width: 120px;
+    height: 120px;
+
+
+}
+.feature-item p {
+    font-size: 36px;
+    color: #000000;
+
+
+}
+.catalog-section {
+    padding: 40px 20px;
+    background-color: white;
+    margin-bottom: 100px;
+
+}
+.catalog-section h2 {
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 50px;
+
+}
+
+.catalog-grid-wrapper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    width: fit-content;
+
+}
+
+.catalog-item {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    /* Плавные переходы */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Начальные значения */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    /* Для плавного увеличения */
+    transform: scale(1);
+    margin: 10px; /* Отступы между элементами */
+}
+
+.catalog-item:hover {
+    /* Transform не влияет на поток документа */
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    /* Поднимаем элемент над остальными */
+    z-index: 10;
+}
+
+.background-image1 {
+    position: absolute;
+
+    width: 80%;
+    height: 80%;
+    margin-top: 50px;
+    margin-left: 40px;
+    background-image: url('/images/444611.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.background-image2 {
+    position: absolute;
+    width: 65%;
+    height:65%;
+    margin-top: 100px;
+    background-image: url('/images/35606361.png.webp');
+    background-size: cover;
+    background-position: center;
+}
+.background-image3 {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    margin-top:50px;
+    background-image: url('/images/575.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.background-image4 {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    margin-top: 90px;
+
+    background-image: url('/images/12496535.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.background-image5 {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    margin-top: 50px;
+    background-image: url('/images/123.webp');
+    background-size: cover;
+    background-position: center;
+}
+.background-image6 {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    margin-top: 70px;
+    background-image: url('/images/40859947.jpg.webp');
+    background-size: cover;
+    background-position: center;
+}
+.background-image7 {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    margin-top: 20px;
+    background-image: url('/images/25403491.jpg.webp');
+    background-size: cover;
+    background-position: center;
+}
+.background-image8 {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    margin-top: 20px;
+    background-image: url('/images/526229.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.content-text {
+    position: relative;
+    text-align: center;
+}
+
+.text-box {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 36px;
+    color: black;
+
+}
+.reviews-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.reviews-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review-slide {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.review-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    min-height: 300px;
+}
+
+.review-text {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+    font-style: italic;
+    position: relative;
+}
+
+.review-text::before,
+.review-text::after {
+    content: '"';
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.author-info {
+    text-align: left;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #696969;
+    margin-bottom: 5px;
+}
+
+.review-prev, .review-next {
+    position: absolute;
+    top: 40%;
+    background: #E6A645;
+    color: white;
+    border: none;
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-prev:hover, .review-next:hover {
+    background: #9e702b;
+    transform: translateY(0%) scale(1.1);
+}
+
+.review-prev {
+    left: -25px;
+}
+
+.review-next {
+    right: -25px;
+}
+
+/* Индикаторы */
+.review-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.review-indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.review-indicator.active {
+    background: #E6A645;
+}
+
+/* Основные стили футера */
+.footer {
+    background: #193E3C;
+    color: white;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+/* Колонки */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+.footer-column a {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+}
+
+/* Логотип и контакты */
+.logo-block {
+    margin-bottom: 30px;
+}
+
+.logo-block img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-phone {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.contact-address,
+.contact-email {
+    font-size: 16px;
+    color: #e0e0e0;
+    line-height: 1.4;
+}
+
+/* Заголовки колонок */
+.column-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2a5e5a;
+}
+
+/* Ссылки */
+.footer-link {
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+/* Время работы и особенности */
+.work-hours {
+    margin-bottom: 25px;
+}
+
+.hours-item {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    padding: 5px 0;
+}
+/* Нижняя часть футера */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 25px 20px 0;
+    border-top: 1px solid #2a5e5a;
+}
+
+.copyright {
+    text-align: center;
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+
+
+
+/* Стили для страницы профиля */
+.profile-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-info {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.profile-info h2 {
+    color: #E6A645;
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    background: #E6A645;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #9e7330;
+    color: white;
+}
+
+.btn-custom {
+    background-color: #E6A645;
+    border-color: #E6A645;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #d19432;
+    border-color: #d19432;
+    color: white;
+}
+
+
+
+
+
+
+/* Авторизация и регистрация */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.auth-header p {
+    color: #666;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #E6A645;
+}
+
+.form-input.error {
+    border-color: #e74c3c;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.auth-button {
+    width: 100%;
+    background: #E6A645;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.auth-button:hover {
+    background: #9e7330;
+}
+
+.auth-divider {
+    text-align: center;
+    margin: 25px 0;
+    color: #666;
+    position: relative;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e1e5e9;
+}
+
+.auth-divider span {
+    background: white;
+    padding: 0 15px;
+    position: relative;
+}
+
+.auth-switch-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid #E6A645;
+    color: #E6A645;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.auth-switch-button:hover {
+    background: #E6A645;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* НОВОСТИ */
+.news-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.breadcrumb-item a {
+    color: #E6A645;
+    text-decoration: none;
+}
+
+.page-header h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.news-content {
+    display: grid;
+    gap: 30px;
+}
+
+.news-item.featured {
+    grid-column: 1 / -1;
+}
+
+.news-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.news-header h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.news-header h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.news-body p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.news-tags {
+    margin-top: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background: #E6A645;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+}
+
+.news-category {
+    color: #E6A645;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.news-date {
+    color: #999;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+/*КАТАЛОГ*/
+.catalog-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    height: 200px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    min-height: 60px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #E6A645;
+    margin-bottom: 20px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-rent {
+    flex: 2;
+    background: #E6A645;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-rent:hover {
+    background: #d19432;
+}
+
+.btn-details {
+    flex: 1;
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-details:hover {
+    background: #545b62;
+}
+
+
