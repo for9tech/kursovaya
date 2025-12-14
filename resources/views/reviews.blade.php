@@ -204,13 +204,7 @@
             </div>
 
             <!-- Призыв к действию -->
-            <div class="cta-section">
-                <div class="cta-content">
-                    <h3>Оставьте свой отзыв</h3>
-                    <p>Поделитесь своим опытом сотрудничества с нами</p>
-                    <a href="{{ route('contacts') }}" class="btn-cta">Написать отзыв</a>
-                </div>
-            </div>
+
         </div>
     </div>
 

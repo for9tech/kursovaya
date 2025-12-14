@@ -65,42 +65,6 @@
                     </div>
                 </div>
 
-                <!-- Форма обратной связи -->
-                <div class="col-md-6">
-                    <div class="contact-form-card">
-                        <h3>Обратная связь</h3>
-                        <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Ваше имя</label>
-                                <input type="text" id="name" class="form-control" placeholder="Введите ваше имя">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Телефон</label>
-                                <input type="tel" id="phone" class="form-control" placeholder="+7 (___) ____-____">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="your@email.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Сообщение</label>
-                                <textarea id="message" class="form-control" rows="4" placeholder="Ваше сообщение..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn-submit">Отправить сообщение</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Карта -->
-
-    </div>
 
     <style>
         .contacts-page {
@@ -140,6 +104,11 @@
 
         .contact-card:hover {
             transform: translateY(-5px);
+        }
+        .row{
+            justify-self: center;
+            width: 1000px;
+            margin-left: 500px;
         }
 
         .contact-icon {
